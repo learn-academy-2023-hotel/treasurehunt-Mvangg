@@ -14,6 +14,8 @@ const App = () => {
     "?", 
     "?"
   ])
+
+
   
   // let randomNumber = Math.floor(Math.random() * board.length)
   const [treasureLocation, setTreasureLocation] = useState( 
@@ -46,10 +48,19 @@ const App = () => {
     }
     setBoard(updatedBoard)
   }
+  
+  const restartGameClick = () => {
+    setBoard(Array(9).fill("?")) // Reset the board to an array of 9 in length with "?" in squares.
+    setTreasureLocation(Math.floor(Math.random() * 9)) // Reset treasure location.
+    setBombLocation(Math.floor(Math.random() * 9)) // Reset bomb location.
+  }
 
   return (
     <>
       <h1>Treasure Hunt Game</h1>
+      <p>
+       <button className="button" onClick={restartGameClick}>Restart Game</button>
+      </p>
       <div className = "board">
       {/* Map over array and return a square for each element. */}
       { board.map((value, index) => {
