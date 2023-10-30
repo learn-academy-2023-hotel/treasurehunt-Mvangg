@@ -57,7 +57,7 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 - As a user, when I click on one of the question marks, an alert appears with the index position of that question mark in the array.
     - branch: index-update
         - added onClick to square div
-        - created handleClick metho to Square
+        - created handleClick method to Square
         - passed index to Square and handleClick
         - added handleSquareClick to App.js
         - passed handleSquareClick to Square to get the index back to App.js (usin functional props)
@@ -68,6 +68,12 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
         - updated value of square at particular index to be a tree
 
 - As a user, if I select the winning square, the question mark will become a treasure emoji. If I select the losing square, the question mark will become a bomb emoji.
+    - branch: treasure-bomb
+        - create state value for treasureLocation
+        - create state value for bombLocation
+            - each state value will use random value index 
+                - update value of square at random index to be a treasure or a bomb
+
 - As a user, I can click on a “Play Again” button that will restart the game.
 - As a user, I can see a counter that shows how many guesses are remaining. The counter starts at five and decrements by one every time I click on a square that is neither the treasure nor the bomb.
 - As a user, I can see a message stating that I won the game by selecting the square that contains the treasure.
