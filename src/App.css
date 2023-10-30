@@ -16,3 +16,12 @@ h1 {
   width: 606px;
   margin: 0 auto;
 }
+
+.button {
+  padding: 5px;
+  left: 50%;
+  bottom: 20%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: orange;
+}
